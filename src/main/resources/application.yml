@@ -1,0 +1,25 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: csvdata
+  datasource:
+    url: jdbc:h2:mem:csvdata
+    username: root
+    password: root
+    driverClassName: org.h2.Driver
+  sql:
+    init:
+      mode: always
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+    console.path: /h2-console
+    console.settings.trace: false
+
